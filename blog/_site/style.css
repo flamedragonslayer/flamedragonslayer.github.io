@@ -1,0 +1,55 @@
+body{
+    border: none;
+    margin:0;
+    padding: 0;
+    background-image:url("img/bck.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+}
+
+/*右半部分*/
+#stage{
+    position: absolute;
+    top: 200px;
+    width: 55%;
+    height: 500px;
+    border: 1px solid black;
+}
+#intro{
+    top:20px;
+    position: absolute;
+    font-size: 50px;
+}
+
+/*左上角*/
+#deck{
+    position: absolute;
+    top: 10px;
+    left:1300px;
+}
+.link{
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 20px;
+    color: black;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.link:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+#logos{
+    position: absolute;
+    top: 60px;
+    left: 35px;
+}
+.logo{
+    display: inline-block;
+    margin-left: 20px;
+    width: 20px;
+    height:20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
