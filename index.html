@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>hello flamedragonslayer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="src/lottie.js"></script>
 </head>
 <body>
     <div id="stage">
@@ -21,11 +22,14 @@
 </body>
 <script>
     const link=document.body.getElementsByClassName("link")
-    link[0].addEventListener('click',function () {
-        window.location.href="blog/_site/index.html"
+    link[0].addEventListener('',function () {
+        window.location.href="blog"
     })
-    link[1].addEventListener('click',function () {
+    link[1].addEventListener('',function () {
         window.location.href=""
     })
+    window.onload=function () {
+        document.body.style.opacity=1
+    }
 </script>
 </html>

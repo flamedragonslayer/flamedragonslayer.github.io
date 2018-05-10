@@ -6,6 +6,8 @@ body{
     background-size:cover;
     background-repeat:no-repeat;
     position: relative;
+    opacity: 0;
+    transition: 3s;
 }
 
 /*右半部分*/
@@ -37,6 +39,7 @@ body{
     transition: 0.5s;
 }
 .link:hover{
+    cursor: pointer;
     opacity: 1;
 }
 #logos{
