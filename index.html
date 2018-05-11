@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="src/lottie.js"></script>
 </head>
-<body>
+<body >
+<div id="all"></div>
     <div id="stage">
         <div id="intro">Hello,I'm Yifan Xia,a web developer who like designing,learning and enjoying life.</div>
     </div>
@@ -21,6 +22,13 @@
     </div>
 </body>
 <script>
+    var animation = lottie.loadAnimation({
+        container:all, // Required
+        path: 'text.json', // Required
+        renderer: 'svg' , // Required
+        loop: false, // Optional
+        autoplay: true, // Optional
+    })
     const link=document.body.getElementsByClassName("link")
     link[0].addEventListener('',function () {
         window.location.href="blog"
