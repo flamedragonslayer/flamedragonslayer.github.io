@@ -7,7 +7,6 @@
     <script src="src/lottie.js"></script>
 </head>
 <body >
-<div id="all"></div>
     <div id="stage">
         <div id="intro">Hello,I'm Yifan Xia,a web developer who like designing,learning and enjoying life.</div>
     </div>
@@ -20,14 +19,22 @@
             <div class="logo"></div>
         </div>
     </div>
+<div id="mouse"></div>
+
 </body>
 <script>
-    var animation = lottie.loadAnimation({
-        container:all, // Required
-        path: 'text.json', // Required
-        renderer: 'svg' , // Required
-        loop: false, // Optional
-        autoplay: true, // Optional
+//    var animation = lottie.loadAnimation({
+//        container:all, // Required
+//        path: 'text.json', // Required
+//        renderer: 'svg' , // Required
+//        loop: false, // Optional
+//        autoplay: true, // Optional
+//    })
+    window.addEventListener('click',function (e) {
+        var x=e.clientX
+        var y=e.clientY
+        mouse.style.left=x+'px'
+        mouse.style.top=y+'px'
     })
     const link=document.body.getElementsByClassName("link")
     link[0].addEventListener('',function () {
