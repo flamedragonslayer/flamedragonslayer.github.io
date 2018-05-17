@@ -35,6 +35,13 @@
         var y=e.clientY
         mouse.style.left=x+'px'
         mouse.style.top=y+'px'
+        mouse.style.visibility='visible'
+        mouse.style.animation='mouseVib 0.5s 1'
+        var i=setTimeout(function () {
+            mouse.style.visibility='hidden'
+            mouse.style.animation=''
+        },450)
+//        这里需要把动画间隔时间设置的很短，否则前面动画会和后面的定时器修改的属性冲突，定时器的时间也要比动画执行时间稍短一些
     })
     const link=document.body.getElementsByClassName("link")
     link[0].addEventListener('',function () {
