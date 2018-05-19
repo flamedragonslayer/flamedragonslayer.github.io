@@ -43,11 +43,12 @@
         },450)
 //        这里需要把动画间隔时间设置的很短，否则前面动画会和后面的定时器修改的属性冲突，定时器的时间也要比动画执行时间稍短一些
     })
+
     const link=document.body.getElementsByClassName("link")
-    link[0].addEventListener('',function () {
-        window.location.href="blog"
+    link[0].addEventListener('click',function () {
+        window.location.href="http://www.baidu.com"
     })
-    link[1].addEventListener('',function () {
+    link[1].addEventListener('click',function () {
         window.location.href=""
     })
     window.onload=function () {
