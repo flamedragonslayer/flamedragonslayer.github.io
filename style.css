@@ -14,7 +14,7 @@ body{
     top: 100px;
     left: 200px;
 }
-/*右半部分*/
+/*左半部分*/
 #stage{
     position: absolute;
     top: 200px;
@@ -28,7 +28,7 @@ body{
     font-size: 50px;
 }
 
-/*左上角*/
+/*右上角*/
 #deck{
     position: absolute;
     top: 10px;
@@ -49,16 +49,26 @@ body{
 #logos{
     position: absolute;
     top: 60px;
-    left: 35px;
+    left: 13px;
 }
 .logo{
     display: inline-block;
     margin-left: 20px;
-    width: 20px;
-    height:20px;
+    width: 32px;
+    height:32px;
     border: 1px solid black;
     border-radius: 50%;
+    opacity: 0.7;
+    transition:0.5s;
 }
+.logo:nth-child(1){
+    background-image: url("img/2.png");
+}
+.logo:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
 
 #mouse{
     position: absolute;
