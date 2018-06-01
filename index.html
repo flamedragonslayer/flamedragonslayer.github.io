@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="src/lottie.js"></script>
 </head>
-<body >
+<body>
+<div class="page" id="page1">
     <div id="stage">
         <div id="intro">Hello,I'm Yifan Xia,a web developer who like designing,learning and enjoying life.</div>
     </div>
@@ -19,8 +20,14 @@
             <div class="logo"></div>
         </div>
     </div>
+</div>
+<div class="page" id="page2">
+</div>
 <div id="mouse"></div>
-
+<div id="scroll">
+    <div class="jump"></div>
+    <div class="jump"></div>
+</div>
 </body>
 <script>
 //    var animation = lottie.loadAnimation({
@@ -30,6 +37,10 @@
 //        loop: false, // Optional
 //        autoplay: true, // Optional
 //    })
+var log=console.log.bind(this)
+//禁用横纵双向滚动条
+    document.body.parentNode.style.overflow ="hidden";
+//
     window.addEventListener('click',function (e) {
         var x=e.clientX
         var y=e.clientY
@@ -45,6 +56,7 @@
     })
 
 //点击跳转部分
+//link
     const logo=document.body.getElementsByClassName("logo")
     const link=document.body.getElementsByClassName("link")
     link[0].addEventListener('click',function () {
@@ -53,11 +65,19 @@
     link[1].addEventListener('click',function () {
         window.location.href=""
     })
-
+//logo
     logo[0].addEventListener('click',function () {
         window.location.href="https://github.com/flamedragonslayer"
     })
-
+//页面
+    const jump=document.body.getElementsByClassName("jump")
+    jump[0].addEventListener('click',function () {
+        window.scrollTo(0,0)
+    })
+    jump[1].addEventListener('click',function () {
+        window.scrollTo(0,771)
+        //这里设置的跳转的纵坐标要刚好比页面高度多1px，才不会在跳转页面时显得突兀。
+    })
 //文字部分显形
     window.onload=function () {
         document.body.style.opacity=1

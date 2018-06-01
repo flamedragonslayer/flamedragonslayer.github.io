@@ -2,9 +2,6 @@ body{
     border: none;
     margin:0;
     padding: 0;
-    background-image:url("img/bck.jpg");
-    background-size:cover;
-    background-repeat:no-repeat;
     position: relative;
     opacity: 0;
     transition: 3s;
@@ -13,6 +10,48 @@ body{
     position: absolute;
     top: 100px;
     left: 200px;
+}
+.page{
+    width: 100%;
+    height:770px;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+#page1{
+    background-image:url("img/bck.jpg");
+}
+#page2{
+    background-image:url("img/bck.jpg");
+}
+
+/*跳转按钮*/
+#scroll{
+    position: fixed;
+    top:300px;
+    left: 1430px;
+    width:100px;
+    height: 200px;
+}
+.jump{
+    width: 50px;
+    height: 50px;
+    background-color: #fffdcb;
+    border-radius:50%;
+    position: absolute;
+    opacity: 0.3;
+    transition: 1s;
+}
+.jump:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.jump:nth-child(1){
+    left:25%;
+    top:25px;
+}
+.jump:nth-child(2){
+    left:25%;
+    top:125px;
 }
 /*左半部分*/
 #stage{
